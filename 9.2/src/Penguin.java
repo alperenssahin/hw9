@@ -30,6 +30,10 @@ public class Penguin {
     public String toStringUsingStreams() {
         // TODO
 
-        return toString();
+        return "Penguin{" +
+                "locations=[" +locations.stream().map(geo -> new String(geo.toString())).collect(Collectors.joining(","))
+                +"]" +
+                ", trackID='" + trackID + "'" +
+                "}";
     }
 }
