@@ -31,7 +31,7 @@ public class test {
 //        System.out.println(pc2.getPenguins());
 
         LinkedList<Penguin> penguins = new LinkedList<>();
-        penguins.add(b);
+        penguins.add(a);
         penguins.add(d);
         if(pc1.findFirstFriend(penguins)!= null){
             System.out.println(pc1.findFirstFriend(penguins).getName());

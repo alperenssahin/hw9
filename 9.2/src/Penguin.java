@@ -15,7 +15,7 @@ public class Penguin {
     public String toString() {
         return "Penguin{" +
                 "locations=" + locations +
-                ", trackID='" + trackID + '\'' +
+                " , trackID='" + trackID + '\'' +
                 '}';
     }
 
@@ -31,7 +31,7 @@ public class Penguin {
         // TODO
 
         return "Penguin{" +
-                "locations=[" +locations.stream().map(geo -> new String(geo.toString())).collect(Collectors.joining(","))
+                "locations=[" +locations.stream().map(geo -> new String(geo.toString())).collect(Collectors.joining(", "))
                 +"]" +
                 ", trackID='" + trackID + "'" +
                 "}";

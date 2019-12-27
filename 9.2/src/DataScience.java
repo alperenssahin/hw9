@@ -22,8 +22,10 @@ public class DataScience {
     AtomicInteger counter = new AtomicInteger(0);
     Stream<PenguinData> data = CSVReading.processInputFile();
     Stream<Penguin> pg = getDataByTrackId(data);
-    pg.forEach(penguin -> {
+    pg.map(penguin -> {
       counter.getAndIncrement();
+      return penguin;
+    }).forEach(penguin -> {
       System.out.println(counter);
       System.out.println(penguin.toStringUsingStreams());
     });
