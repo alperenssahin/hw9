@@ -1,6 +1,7 @@
 package og;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Set;
 import java.util.function.Function;
@@ -38,8 +39,9 @@ public class PenguinColony {
         // TODO
         HashSet<Penguin> nhs = new HashSet<>();
         HashSet<Penguin> tmp = getPenguins();
-        while (tmp.iterator().hasNext()){
-            Penguin pTmp = tmp.iterator().next();
+        Iterator<Penguin> pIterator = tmp.iterator();
+        while (pIterator.hasNext()){
+            Penguin pTmp = pIterator.next();
             if(pred.test(pTmp)){
                 nhs.add(pTmp);
                 tmp.remove(pTmp);
@@ -52,22 +54,31 @@ public class PenguinColony {
     public Penguin findFirstFriend(LinkedList<Penguin> penguinFriends) {
         // TODO
         if(penguinFriends.size() > 0){
-            return penguinFriends.get(0);
+            HashSet<Penguin> hsp = getPenguins();
+            Iterator<Penguin> piterator = penguinFriends.iterator();
+            while (piterator.hasNext()){
+                Penguin tmp = piterator.next();
+                if(hsp.contains(tmp)){
+                    return tmp;
+                }
+            }
+            return null;
         }
         else{
             return null;
         }
-
     }
 
     public boolean canFeedPenguinsWithProperty(Predicate<? super Penguin> pred, Set<Fish> fishes) {
         // TODO
         boolean conn = true;
-        while (fishes.iterator().hasNext()){
-            Fish a = fishes.iterator().next();
+        Iterator<Fish> fishIterator = fishes.iterator();
+        while (fishIterator.hasNext()){
+            Fish a = fishIterator.next();
             HashSet<Penguin> tmp = getPenguins();
-            while (tmp.iterator().hasNext()){
-                Penguin pTmp = tmp.iterator().next();
+            Iterator<Penguin> penguinIterator = tmp.iterator();
+            while (penguinIterator.hasNext()){
+                Penguin pTmp = penguinIterator.next();
                 if(pred.test(pTmp)){
                     conn = false;
                     break;
@@ -81,8 +92,9 @@ public class PenguinColony {
         // TODO
         int sum = 0;
         HashSet<Penguin> tmp = getPenguins();
-        while (tmp.iterator().hasNext()){
-            Penguin pTmp = tmp.iterator().next();
+        Iterator<Penguin> penguinIterator = tmp.iterator();
+        while (penguinIterator.hasNext()){
+            Penguin pTmp = penguinIterator.next();
             sum += fun.apply(pTmp);
         }
         return sum;
