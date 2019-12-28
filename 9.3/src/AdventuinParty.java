@@ -199,7 +199,6 @@ public final class AdventuinParty {
 					}
 				}
 				double absoluteDifferance = (double)sumPositiveDif/positiveCount - (double)sumNegativeDif/negativeCount;
-				System.out.println(absoluteDifferance);
 				res.put(hatType,absoluteDifferance);
 
 			}else{
