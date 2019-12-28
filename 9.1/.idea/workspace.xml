@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b41512ca-97b5-47cc-945c-1a1173c97944" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../9.2/src/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../9.2/src/DataScience.java" beforeDir="false" afterPath="$PROJECT_DIR$/../9.2/src/DataScience.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../9.2/src/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../9.2/src/Penguin.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +89,9 @@
       <updated>1576938484624</updated>
       <workItem from="1576938486003" duration="6867000" />
       <workItem from="1577309401650" duration="1680000" />
-      <workItem from="1577427577148" duration="891000" />
+      <workItem from="1577427577148" duration="1548000" />
+      <workItem from="1577462042542" duration="536000" />
+      <workItem from="1577538203436" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="9.1 son">
       <created>1576951687740</created>

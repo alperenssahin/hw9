@@ -1,4 +1,3 @@
-package pgdp.color;
 
 import java.util.Objects;
 

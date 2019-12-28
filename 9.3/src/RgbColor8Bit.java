@@ -1,4 +1,3 @@
-package pgdp.color;
 
 public final class RgbColor8Bit extends RgbColor {
 

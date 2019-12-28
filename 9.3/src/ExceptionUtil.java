@@ -1,4 +1,4 @@
-package pgdp.color;
+
 
 /**
  * Vorgegebene Klasse, hier drin wird nichts bewertet !!!
